@@ -13,3 +13,8 @@ function squareRoot(num) {
 function cube(num) {
     return num * num * num;
 }
+
+function circleArea(radius) {
+    return Math.PI * radius * radius
+}
+
