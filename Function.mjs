@@ -18,3 +18,6 @@ function circleArea(radius) {
     return Math.PI * radius * radius
 }
 
+function greet(name) {
+    return `Hello, ${name}`;
+}
