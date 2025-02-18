@@ -5,3 +5,8 @@ function square(num) {
 function inchesToMm(inches) {
     return inches * 25.4;
 }
+
+function squareRoot(num) {
+    return Math.sqrt(num);
+}
+
