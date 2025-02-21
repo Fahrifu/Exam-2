@@ -7,7 +7,14 @@ function inchesToMm(inches) {
 }
 
 function squareRoot(num) {
-    return Math.sqrt(num);
+    if (num === 0 || num === 1) return num;
+
+    let guess = num;
+    while (guess * guess > num) {
+        guess = (guess + num / guess) / 2;
+    }
+
+    return guess;
 }
 
 function cube(num) {
