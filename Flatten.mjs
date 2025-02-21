@@ -1,12 +1,14 @@
+import fs from 'fs';
+
 function flattenArray(arr) {
     let result = [];
 
     function recursiveFlatten(subArray) {
-        for (let item of subArray) {
-            if (Array.isArray(item)) {
-                flattenArray(item);
+        for (let i = 0; i < subArray.length; i++) {
+            if (Array.isArray(subArray[i])) {
+                recursiveFlatten(subArray[i]);
             } else {
-                result.push(item);
+                result.push(subArray[i]);
             }
         }
     }
@@ -14,3 +16,7 @@ function flattenArray(arr) {
     recursiveFlatten(arr)
     return result;
 }
+
+const data = JSON.parse(fs.readFileSync('example_files/arrays.json', 'utf-8'));
+
+console.log(flattenArray(data));
