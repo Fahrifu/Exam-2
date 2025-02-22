@@ -9,5 +9,9 @@ function analyzeTree(node, depth = 1) {
 
     let left = analyzeTree(node.left, depth + 1);
     let right = analyzeTree(node.right, depth + 1);
-    
+
+    let maxDepth = left.depth;
+    if (right.depth > maxDepth) {
+        maxDepth = right.depth;
+    }
 }
