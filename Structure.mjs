@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 function analyzeTree(node, depth = 1) {
     if (!node) {
         return {
@@ -14,4 +16,14 @@ function analyzeTree(node, depth = 1) {
     if (right.depth > maxDepth) {
         maxDepth = right.depth;
     }
+
+    return {
+        sum: node.value + left.sum + right.sum,
+        depth: maxDepth,
+        count: 1 + left.count + right.count
+    };
 }
+
+const data = JSON.parse(fs.readFileSync('example_files/nodes.json', 'utf-8'));
+
+console.log(analyzeTree(data));
