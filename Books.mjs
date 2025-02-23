@@ -12,4 +12,20 @@ function booksStartWithThe(books) {
 
 const data = JSON.parse(fs.readFileSync('example_files/books.json', 'utf-8'));
 
-console.log(booksStartWithThe(data))
+//console.log(booksStartWithThe(data))
+
+function booksWithTInAuthor(books) {
+    let result = [];
+    for (let i = 0; i < books.length; i++) {
+        let author = books[i].author;
+        for (let j = 0; j < author.length; j++) {
+            if (author[j] === "t" || author [j] === "T") {
+                result.push(books[i]);
+                break;
+            }
+        }
+    }
+    return result;
+}
+
+console.log(booksWithTInAuthor(data));
