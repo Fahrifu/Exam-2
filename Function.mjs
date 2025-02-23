@@ -1,3 +1,5 @@
+import test from './test.mjs';
+
 function square(num) {
     return num * num;
 }
@@ -28,3 +30,7 @@ function circleArea(radius) {
 function greet(name) {
     return `Hello, ${name}`;
 }
+
+let tests = test("Basic Functions")
+
+tests.isEqual(square(5), 25, "Square of 5 should be 25");
