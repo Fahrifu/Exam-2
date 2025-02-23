@@ -37,3 +37,4 @@ tests.isEqual(square(5), 25, "Square of 5 should be 25");
 tests.isEqual(inchesToMm(2), 50.8, "2 inches should be 50.8mm");
 tests.isInRange(squareRoot(49), 6.9, 7.1, "Square root of 49 should be around 7");
 tests.isEqual(cube(3), 27, "Cube of 3 should be 27");
+tests.isInRange(circleArea(5), 78.5, 78.6, "Area of a circle with radius of 5 should be ~78.54")
