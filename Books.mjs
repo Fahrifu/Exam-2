@@ -53,3 +53,59 @@ function countBooksBefore(books, year) {
 
 
 //console.log(countBooksBefore(data, 2004));
+
+function sortBooksAlphabetically(books, ascending = true) {
+    let sortedBooks = books.slice();
+
+    for (let i = 0; i < sortedBooks.length - 1; i++) {
+        for (let j = 0; j < sortedBooks.length - i - 1; j++) {
+            let swap = false;
+            if (ascending) {
+                if (sortedBooks[j].title > sortedBooks[j + 1].title) {
+                    swap = true;
+                }
+            } else {
+                if (sortedBooks[j].title < sortedBooks[j + 1].title) {
+                    swap = true;
+                }
+            }
+
+            if (swap) {
+                let temp = sortedBooks[j];
+                sortedBooks[j] = sortedBooks[j + 1];
+                sortedBooks[j + 1] = temp;
+            }
+        }
+    } 
+    return sortedBooks;
+}
+
+//console.log(sortBooksAlphabetically(data, true));
+
+function sortBooksChronologically(books, ascending = true) {
+    let sortedBooks = books.slice();
+
+    for (let i = 0; i < sortedBooks.length - 1; i++) {
+        for (let j = 0; j < sortedBooks.length - i - 1; j++) {
+            let swap = false;
+            if (ascending) {
+                if (sortedBooks[j].publication_year > sortedBooks[j + 1].publication_year) {
+                    swap = true;
+                }
+            } else {
+                if (sortedBooks[j].publication_year < sortedBooks[j + 1].publication_year) {
+                    swap = true;
+                }
+            }
+
+            if (swap) {
+                let temp = sortedBooks[j];
+                sortedBooks[j] = sortedBooks[j + 1];
+                sortedBooks[j + 1] = temp;
+            }
+        }
+    } 
+    return sortedBooks;
+}
+
+//console.log(sortBooksChronologically(data, true));
