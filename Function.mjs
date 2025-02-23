@@ -34,3 +34,4 @@ function greet(name) {
 let tests = test("Basic Functions")
 
 tests.isEqual(square(5), 25, "Square of 5 should be 25");
+tests.isEqual(inchesToMm(2), 50.8, "2 inches should be 50.8mm");
