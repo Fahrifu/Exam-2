@@ -28,4 +28,28 @@ function booksWithTInAuthor(books) {
     return result;
 }
 
-console.log(booksWithTInAuthor(data));
+//console.log(booksWithTInAuthor(data));
+
+function countBooksAfter(books, year) {
+    let count = 0;
+    for (let i = 0; i < books.length; i++) {
+        if (books[i].publication_year > year) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function countBooksBefore(books, year) {
+    let count = 0;
+    for (let i = 0; i < books.length; i++) {
+        if (books[i].publication_year < year) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+
+//console.log(countBooksBefore(data, 2004));
