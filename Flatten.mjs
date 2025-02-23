@@ -1,4 +1,6 @@
 import fs from 'fs';
+import test from './test.mjs'
+import { json } from 'stream/consumers';
 
 function flattenArray(arr) {
     let result = [];
@@ -20,3 +22,7 @@ function flattenArray(arr) {
 const data = JSON.parse(fs.readFileSync('example_files/arrays.json', 'utf-8'));
 
 console.log(flattenArray(data));
+
+const tests = test("Flatten the numbers");
+
+tests.isEqual(JSON.stringify(flattenArray([1, [2, [3, 4]], 5])), JSON.stringify([1, 2, 3, 4, 5]), "Flattening nested array");
