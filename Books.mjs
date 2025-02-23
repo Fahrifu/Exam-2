@@ -109,3 +109,38 @@ function sortBooksChronologically(books, ascending = true) {
 }
 
 //console.log(sortBooksChronologically(data, true));
+
+function groupBooksByFirstName(books) {
+    let groups = {};
+
+    for (let i = 0; i < books.length; i++) {
+        let authorParts = books[i].author.split(" ");
+        let firstName = authorParts[0];
+
+        if (!groups[firstName]) {
+            groups[firstName] = [];
+        }
+        groups[firstName].push(books[i])
+    }
+
+    return groups;
+}
+
+function groupBooksByLastName(books) {
+    let groups = {};
+
+    for (let i = 0; i < books.length; i++) {
+        let authorParts = books[i].author.split(" ");
+        let lastName = authorParts[0];
+
+        if (!groups[lastName]) {
+            groups[lastName] = [];
+        }
+        groups[lastName].push(books[i])
+    }
+
+    return groups;
+}
+
+console.log(groupBooksByFirstName(data));
+console.log(groupBooksByLastName(data));
