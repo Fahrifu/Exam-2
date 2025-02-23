@@ -52,7 +52,15 @@ function countBooksBefore(books, year) {
     return count;
 }
 
-
+function getISBNsByAuthor(books, authorName) {
+    let result = [];
+    for (let i = 0; i < books.length; i++) {
+        if (books[i].author === authorName) {
+            result.push(books[i].isbn);
+        }
+    }
+    return result;
+}
 
 //console.log(countBooksBefore(data, 2004));
 
@@ -159,3 +167,4 @@ tests.isEqual(booksStartWithThe(books).length, 2, "Books starting with 'The' sho
 tests.isEqual(booksWithTInAuthor(books).length, 2, "Books with 't' in author name should be 2");
 tests.isEqual(countBooksAfter(books, 1992), 1, "Books after 1992 should be 1");
 tests.isEqual(countBooksBefore(books, 2004), 3, "Books before 2004 should be 3");
+tests.isEqual()
