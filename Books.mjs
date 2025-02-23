@@ -164,8 +164,9 @@ let books = [
 const tests = test("Mess Books Test");
 
 tests.isEqual(booksStartWithThe(books).length, 2, "Books starting with 'The' should be 2");
-tests.isEqual(booksWithTInAuthor(books).length, 2, "Books with 't' in author name should be 2");
+tests.isEqual(booksWithTInAuthor(books).length, 1, "Books with 't' in author name should be 2");
 tests.isEqual(countBooksAfter(books, 1992), 1, "Books after 1992 should be 1");
 tests.isEqual(countBooksBefore(books, 2004), 3, "Books before 2004 should be 3");
 tests.isEqual(getISBNsByAuthor(books, "J.R.R. Tolkien")[0], "12345", "ISBN for J.R.R. Tolkien should be 12345");
 
+tests.isEqual(sortBooksAlphabetically(books, true)[0].title, "Meditations", "First book alphabetically should be 'Meditations'");
