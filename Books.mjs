@@ -142,5 +142,11 @@ function groupBooksByLastName(books) {
     return groups;
 }
 
-console.log(groupBooksByFirstName(data));
-console.log(groupBooksByLastName(data));
+//console.log(groupBooksByFirstName(data));
+//console.log(groupBooksByLastName(data));
+
+let books = [
+    { title: "The Hobbit", publication_year: 1937, author: "J.R.R. Tolkien", isbn: "12345" },
+    { title: "Meditations", publication_year: 2002, author: "Marcus Aurelius", isbn: "67890" },
+    { title: "The Catcher in the Rye", publication_year: 1951, author: "J.D. Salinger", isbn: "22222" }
+];
