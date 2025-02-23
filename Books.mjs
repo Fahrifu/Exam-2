@@ -157,3 +157,4 @@ const tests = test("Mess Books Test");
 
 tests.isEqual(booksStartWithThe(books).length, 2, "Books starting with 'The' should be 2");
 tests.isEqual(booksWithTInAuthor(books).length, 2, "Books with 't' in author name should be 2");
+tests.isEqual(countBooksAfter(books, 1992), 1, "Books after 1992 should be 1");
