@@ -6,7 +6,8 @@ function test(description) {
     return {
         isEqual,
         isNotANumber,
-        dosNotThrowError
+        dosNotThrowError,
+        isInRange
     }
 }
 
