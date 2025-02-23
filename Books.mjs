@@ -1,4 +1,6 @@
 import fs from 'fs';
+import test from './test.mjs'
+
 
 function booksStartWithThe(books) {
     let result = [];
@@ -150,3 +152,7 @@ let books = [
     { title: "Meditations", publication_year: 2002, author: "Marcus Aurelius", isbn: "67890" },
     { title: "The Catcher in the Rye", publication_year: 1951, author: "J.D. Salinger", isbn: "22222" }
 ];
+
+const tests = test("Mess Books Test");
+
+tests.isEqual(booksStartWithThe(books), 2, "Books starting with 'The' should be 2");
