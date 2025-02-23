@@ -39,6 +39,7 @@ const tests = test("Tree Structure Test");
 let result = analyzeTree(tree);
 
 tests.isEqual(result.sum, 42, "Sum of tree should be 42");
+tests.isEqual(result.depth, 3, "Tree depth should be 3");
 
 const data = JSON.parse(fs.readFileSync('example_files/nodes.json', 'utf-8'));
 
