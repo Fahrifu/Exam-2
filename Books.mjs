@@ -170,3 +170,4 @@ tests.isEqual(countBooksBefore(books, 2004), 3, "Books before 2004 should be 3")
 tests.isEqual(getISBNsByAuthor(books, "J.R.R. Tolkien")[0], "12345", "ISBN for J.R.R. Tolkien should be 12345");
 
 tests.isEqual(sortBooksAlphabetically(books, true)[0].title, "Meditations", "First book alphabetically should be 'Meditations'");
+tests.isEqual(sortBooksChronologically(books, false)[0].title, "Meditations", "Latest book should be 'Meditations'");
