@@ -24,6 +24,16 @@ function analyzeTree(node, depth = 1) {
     };
 }
 
+let tree = {
+    value: 10,
+    left: { value: 5, left: null, right: null},
+    right: {
+        value: 15,
+        left: { value: 12, left: null, right: null},
+        right: null
+    }
+};
+
 const data = JSON.parse(fs.readFileSync('example_files/nodes.json', 'utf-8'));
 
 console.log(analyzeTree(data));
